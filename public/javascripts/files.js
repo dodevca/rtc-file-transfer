@@ -169,14 +169,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const cancelTransfer = async() => {
-        // await fetch('https://satset.dodevca.com/api/cancel', {
+        // await fetch('https://satset.com/api/cancel', {
         //     method  : 'POST',
         //     body    : JSON.stringify({
         //         code: elements.uniqueCodeDisplay.value.trim()
         //     })  
         // })
 
-        await fetch(`/api/cancel?code=${elements.uniqueCodeDisplay.value.trim()}`)
+        await fetch(`https://satset.com/api/cancel?code=${elements.uniqueCodeDisplay.value.trim()}`)
         
         fileArr                         = receivedBuffers = []
         fileSize                        = receivedSize = 0
@@ -312,7 +312,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if(elements.radioDirect.checked && fileArr.length > 0) {
             try {
                 let uniqueCode = ''
-                const generate = await fetch('/api/send')
+                const generate = await fetch('https://satset.com/api/send')
                 await generate.json()
                 .then(async(response) => {
                     uniqueCode                          = response.code
