@@ -1,19 +1,17 @@
-<section class="py-4" id="transfer">
+<section class="tab-pane show active py-4" id="transfer" role="tabpanel" aria-labelledby="nav-send-tab" tabindex="0">
     <div class="container py-4">
         <div class="row">
-            <div class="col-lg-6 text-center text-lg-start pb-5 py-lg-4 my-auto offset-lg-1 order-lg-2">
+            <div class="col-lg-5 py-lg-4 my-auto">
+                <%- include('partials/transferTab', { tab: contents.tabActive, code: contents.code ?? '' }); %>
+            </div>
+            <div class="col-lg-6 text-center text-lg-start py-5 py-lg-4 my-auto offset-lg-1">
                 <h2 class="h6 text-secondary fw-bold">Lorem ipsum dolor sit amet</h2>
                 <h1 class="display-3 text-primary fw-bold">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</h1>
                 <p class="mt-4 mb-0">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
-            <div class="col-lg-5 py-lg-4 my-auto order-lg-1">
-                <%- include('partials/transferTab', { tab: contents.tabActive, code: contents.code ?? '' }); %>
-            </div>
         </div>
     </div>
-</section>
-<section class="py-4" id="partner">
-    <div class="container py-lg-4">
+    <div class="container py-lg-4" id="partner">
         <h3 class="h6 text-center fw-bold text-dark">Partnered and Trusted by</h3>
         <ul class="list-unstyled d-flex align-items-center justify-content-center overflow-auto mt-4 gap-4">
             <% for(i = 0; i <= 5; i++) { %>
@@ -24,7 +22,7 @@
         </ul>
     </div>
 </section>
-<section class="py-4" id="work">
+<section class="tab-pane fade py-4" id="work" role="tabpanel" aria-labelledby="nav-send-tab" tabindex="0">
     <div class="container py-lg-4">
         <h3 class="h2 text-center fw-bold text-dark">How it work?</h3>
         <div class="py-5 my-5"></div>
@@ -33,9 +31,110 @@
         </div>
     </div>
 </section>
-<section class="py-4" id="faq">
+<section class="tab-pane fade py-4" id="faq" role="tabpanel" aria-labelledby="nav-send-tab" tabindex="0">
     <div class="container py-lg-4">
-        <h3 class="h2 text-center fw-bold text-dark">Frequently Asked Questions</h3>
-        <div class="py-5 my-5"></div>
+        <h3 class="h2 text-center fw-bold text-dark mb-4">Frequently Asked Questions</h3>
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="accordion accordion-flush" id="accordionQuestion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button fw-bold rounded collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                What is SatSet?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionQuestion">
+                            <div class="accordion-body">
+                                SatSet.com is a peer-to-peer file transfer platform that allows you to send and receive files quickly and easily without ..... .
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button fw-bold rounded collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                How does SatSet work?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionQuestion">
+                            <div class="accordion-body">
+                                You simply need to select the file you want to send, then a unique code or barcode will be generated. The recipient just needs to enter the code or scan the barcode to download the file.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button fw-bold rounded collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                Do I need to create an account to use SatSet?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionQuestion">
+                            <div class="accordion-body">
+                                No, you do not need to create an account to send or receive files on satset.com. Our service is ... .
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button fw-bold rounded collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                                Is there a limit to the size of the file I can send?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionQuestion">
+                            <div class="accordion-body">
+                                SatSet allows you to send files ... . However, transfer speed may be affected by file size and your internet connection.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button fw-bold rounded collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                                Is my file secure on SatSet?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionQuestion">
+                            <div class="accordion-body">
+                                Yes, security is our top priority. ... .
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button fw-bold rounded collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                                How long are my files available for download?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionQuestion">
+                            <div class="accordion-body">
+                                ...
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button fw-bold rounded collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+                                Is SatSet free to use?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionQuestion">
+                            <div class="accordion-body">
+                                Yes, satset.com is a free service that anyone can use to send and receive files easily and quickly.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button fw-bold rounded collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
+                                I'm having trouble sending or receiving files. What should I do?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionQuestion">
+                            <div class="accordion-body">
+                                If you encounter any issues, you can contact our support team through the contact page or email provided on our site. We are ready to assist you 24/7.
+                            </div>
+                        </div>
+                    </div>
+                </div>             
+            </div>
+        </div>
     </div>
 </section>
