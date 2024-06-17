@@ -176,7 +176,7 @@ document.addEventListener('DOMContentLoaded', () => {
         //     })  
         // })
 
-        await fetch(`https://satset.dodevca.com/api/cancel?code=${elements.uniqueCodeDisplay.value.trim()}`)
+        await fetch(`/api/cancel?code=${elements.uniqueCodeDisplay.value.trim()}`)
         
         fileArr                         = receivedBuffers = []
         fileSize                        = receivedSize = 0
@@ -312,12 +312,12 @@ document.addEventListener('DOMContentLoaded', () => {
         if(elements.radioDirect.checked && fileArr.length > 0) {
             try {
                 let uniqueCode = ''
-                const generate = await fetch('https://satset.dodevca.com/api/send')
+                const generate = await fetch('/api/send')
                 await generate.json()
                 .then(async(response) => {
                     uniqueCode                          = response.code
                     elements.uniqueCodeDisplay.value    = uniqueCode
-                    elements.qrCode.src                 = `https://image-charts.com/chart?chs=300x300&cht=qr&chl=https%3A%2F%2Fsatset.dodevca.com%2F%3Fcode%3D${uniqueCode}&choe=UTF-8`
+                    elements.qrCode.src                 = `https://image-charts.com/chart?chs=300x300&cht=qr&chl=https%3A%2F%2Fsatset.com%2F%3Fcode%3D${uniqueCode}&choe=UTF-8`
                     elements.navReceiveTab.disabled     = true
                     
                     showElement(elements.transferGenerate)
