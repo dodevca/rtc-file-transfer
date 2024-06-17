@@ -30,8 +30,6 @@ router.get('/send', async(req, res) => {
 })
 
 router.get('/cancel', async(req, res) => {
-// router.post('/cancel', async(req, res) => {
-    // const code      = req.body.code
     const code = req.query.code
 
     if(code == '' || code == undefined)
