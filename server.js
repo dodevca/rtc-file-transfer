@@ -14,6 +14,7 @@ const server        = http.createServer(app)
 const io            = socketIo(server)
 const port          = process.env.PORT
 const homeRouter    = require('./routes/home')
+const userRouter    = require('./routes/user')
 const apiRouter     = require('./routes/api')
 
 app.set('view engine', 'ejs')
@@ -25,6 +26,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 // routes
 app.use('/', homeRouter)
+app.use('/user', userRouter)
 app.use('/api', apiRouter)
 
 // websocket

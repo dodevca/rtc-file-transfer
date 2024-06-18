@@ -19,10 +19,8 @@
                 </button>
                 <div class="justify-content-between collapse navbar-collapse" id="navbar">
                     <div class="navbar-nav text-center" role="tablist">
-                        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#transfer" type="button" role="tab" aria-controls="transfer" aria-selected="true" aria-current="page">Home</button>
-                        <button class="nav-link" id="work-tab" data-bs-toggle="tab" data-bs-target="#work" type="button" role="tab" aria-controls="work" aria-selected="false">How to use</button>
-                        <button class="nav-link" id="pricing-tab" data-bs-toggle="tab" data-bs-target="#pricing" type="button" role="tab" aria-controls="pricing" aria-selected="false">Pricing</button>
-                        <button class="nav-link" id="faq-tab" data-bs-toggle="tab" data-bs-target="#faq" type="button" role="tab" aria-controls="faq" aria-selected="false">FAQ</button>
+                        <button class="nav-link active" aria-current="page">Home</button>
+                        <button class="nav-link">Pricing</button>
                     </div>
                     <div class="d-flex flex-column flex-md-row align-items-center justify-content-md-end mt-3 mt-md-0 gap-2">
                         <button type="button" class="btn btn-outline-primary py-2">Log In</button>
@@ -35,9 +33,10 @@
     <main class="tab-content">
         <%- body %>
     </main>
-    <footer class="bg-light py-4 py-lg-5">
+    <footer class="bg-light-subtle py-4 py-lg-5">
         <div class="container">
             <!-- <div class="py-5 my-5"></div> -->
+             <p class="small text-light text-center mb-0">&copy; 2024 SatSet ltd. All rights reserved.</p>
         </div>
     </footer>
     <div class="modal fade" id="alert-modal" tabindex="-1" aria-labelledby="alert-modal-label" aria-hidden="true">

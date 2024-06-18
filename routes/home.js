@@ -4,7 +4,7 @@ const router  = express.Router()
 router.get('/', (req, res) => {
   res.render('home', {
     'meta'      : {
-      'title'       : 'Satset - File Transfer',
+      'title'       : 'SatSet - File Transfer',
       'description' : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
     },
     'contents'  : {
